@@ -5,17 +5,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
   font-size: 28px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 
 .nav-links {
   list-style: none;
@@ -37,18 +36,16 @@
   box-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
 }
 
-.card {
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  animation: fade-in 0.8s ease-out;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in {
@@ -56,6 +53,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -63,13 +61,7 @@
 }
 
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
+
+
+
