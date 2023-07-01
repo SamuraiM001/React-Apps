@@ -1,0 +1,22 @@
+.grades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .grade-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .test-name {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .result {
+    font-weight: bold;
+  }
+  

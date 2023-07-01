@@ -1,0 +1,62 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-right: 20px;
+}
+.end-tests-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 14px 28px;
+  font-size: 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.end-tests-button:hover {
+  background-color: #45a049;
+}
+
+.card-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* Adjust the width as desired */
+  height: 200px;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 10px; /* Adjust the margin as desired */
+}
+
+.card-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-button h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card-button p {
+  font-size: 14px;
+}
+
+.card-button:focus {
+  outline: none;
+}
