@@ -59,6 +59,7 @@ const users = [
     UTISCode: "123456",
     password: "password123",
     class: "9C",
+    userType:"STUDENT"
   },
   {
     id: 2,
@@ -67,6 +68,7 @@ const users = [
     UTISCode: "789012",
     password: "password456",
     class: "5C",
+    userType:"TEACHER"
   },
 ];
 const valid = [];
@@ -123,13 +125,11 @@ app.get('/tests/:id', (req, res) => {
 app.post('/login', (req, res) => {
   const { UTISCode, password } = req.body;
 
-  // Find the user with the corresponding UTISCode and password
   const user = users.find((user) => user.UTISCode === UTISCode && user.password === password);
 
   if (user) {
-    // Return the user's name, second name, and class
-    const { name, secondName, class: userClass } = user;
-    res.json({ name, secondName, class: userClass });
+    const { name, secondName, class: userClass, userType } = user;
+    res.json({ name, secondName, class: userClass , userType});
   } else {
     res.status(401).send('Invalid UTISCode or password');
   }

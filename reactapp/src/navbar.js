@@ -14,7 +14,7 @@ function Navbar(){
 
     return (
         <nav className="navbar">
-            <h1 className="logo">Tərəqqi Liseyi</h1>
+            <h1 className="logo">Test İşlə</h1>
             <ul className="nav-links">
                 <li><Link to="/">Ana Səhifə</Link></li>
                 {!isLogged && (
@@ -37,7 +37,7 @@ function Navbar(){
                 )}
                  {isLogged  && (
                     <>
-                        <li><Link onClick={handleLogout}>Çıxış</Link></li>
+                        <li><Link to="/" onClick={handleLogout}>Çıxış</Link></li>
                     </>
                 )}
             </ul>

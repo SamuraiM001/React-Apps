@@ -4,7 +4,6 @@ import Loginpage from './pages/auth/login';
 import Navbar from './navbar';
 import Testsolver from './pages/tests/testsolver';
 import About from './pages/about/about';
-import Teacherlogin from './pages/auth/teacherlogin';
 import Grades from './pages/tests/grades';
 import Tests from './pages/tests/tests';
 import { useDispatch } from 'react-redux';
@@ -25,15 +24,15 @@ function App() {
 
   return (
       <Router>
+        <Navbar/>
         <Routes>
-          <Route path="/" element={<><Navbar/><Homepage /></>} />
-          <Route index element={<><Navbar/><Homepage /></>} />
-          <Route path='/login' element={<><Navbar/><Loginpage /></>} />
-          <Route path='/about' element={<><Navbar/><About /></>} />
-          <Route path='/teacherlogin' element={<><Navbar/><Teacherlogin /></>} />
-          <Route path='/tests' element={<><Navbar/><Tests /></>} />
-          <Route path='/testsolver' element={<><Navbar/><Testsolver /></>} />
-          <Route path='/grades' element={<><Navbar/><Grades /></>} />
+          <Route index element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path='/login' element={<Loginpage />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/tests' element={<Tests />} />
+          <Route path='/testsolver' element={<Testsolver />} />
+          <Route path='/grades' element={<Grades />} />
         </Routes>
       </Router>
     );

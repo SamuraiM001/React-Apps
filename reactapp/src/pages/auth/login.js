@@ -44,8 +44,8 @@ function Loginpage() {
 
       if (response.ok) {
         const data = await response.json();
-        dispatch(Login("STUDENT"));
-        localStorage.setItem("login", "STUDENT");
+        dispatch(Login(data.userType));
+        localStorage.setItem("login",data.userType);
         dispatch(setUser({class:data.class,UTIS:username}));
         localStorage.setItem("class", data.class);
         localStorage.setItem("UTIS", username);
@@ -100,9 +100,7 @@ function Loginpage() {
             Daxil Ol
           </button>
           {loginError && <p className="error-message">Belə bir istifadəçi yoxdur</p>}
-          <Link className="teacher-login-btn" to="/teacherlogin">
-            Müəllim üçün Kabinet
-          </Link>
+
         </form>
       </div>
     </div>
