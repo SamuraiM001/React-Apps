@@ -1,0 +1,29 @@
+/* Contact CSS */
+.contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #64ffda;
+    color: #212121;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #ff4081;
+  }
+  
+  .contact-button span {
+    margin-left: 10px;
+  }
+  

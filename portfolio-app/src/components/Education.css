@@ -1,0 +1,15 @@
+/* Education.css */
+.education-container {
+    background-color: #212121;
+    color: #e0e0e0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  .education-text {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
