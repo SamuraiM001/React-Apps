@@ -1,0 +1,105 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0B2546;
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-burger {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-image {
+  width: 150px;
+  height: auto;
+}
+
+.nav-items {
+  text-align: end;
+}
+
+.nav-link {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: white;
+  color: #0B2546;
+  border-color: #0B2546;
+}
+
+.bm-burger-button {
+  position: absolute;
+  width: 26px;
+  height: 20px;
+  left: 20px;
+  top: 23px;
+}
+  
+  .bm-burger-bars {
+    margin-top: 3px;
+    background: white;
+  }
+  
+  .bm-menu-wrap {
+    top: 0;
+    left: 0;
+  }
+  
+  .bm-menu {
+    background: #0B2546;
+    margin-right: 20px;
+    width: 100%;
+  }
+  
+  .bm-item-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bm-item {
+    margin-bottom: 15px;
+  }
+  
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+  }
+  
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Additional adjustments can be made here */
+  
