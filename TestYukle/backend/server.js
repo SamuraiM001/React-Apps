@@ -18,17 +18,15 @@ const tests = [
     QUESTIONS: [
       {
         QUESTION: "What is the name of the capital of Azerbaijan",
-        ANSWERS: ["Baku", "Gandja", "Samaxi"],
+        ANSWERS:"Baku",
         TYPE: "singleAnswered",
-        RIGHTANSWER: "1",
         SCORE: "Çətin",
       },
       {
         QUESTION: "What is the name of the capital of Turkiye",
-        ANSWERS: ["Ankara", "Istanbul", "Baku"],
+        ANSWERS:  "Baku",
         TYPE: "singleAnswered",
         SCORE: "Çətin",
-        RIGHTANSWER: "1",
       },
     ],
   },
@@ -42,14 +40,12 @@ const tests = [
     QUESTIONS: [
       {
         QUESTION: "What is the name of the capital of Azerbaijan",
-        ANSWERS: ["Baku", "Gandja", "Samaxi"],
-        RIGHTANSWER: "1",
+        ANSWERS: "Baku",
         SCORE: "Çətin",
       },
       {
         QUESTION: "What is the name of the capital of Turkiye",
-        ANSWERS: ["Ankara", "Istanbul", "Baku"],
-        RIGHTANSWER: "1",
+        ANSWERS: "Ankara",
         SCORE: "Çətin",
       },
     ],
@@ -122,6 +118,20 @@ app.get('/tests/:id', (req, res) => {
   } else {
     res.status(404).send('Test not found');
   }
+});
+// POST request to add a new test
+app.post('/addTest', (req, res) => {
+  const newTest = req.body;
+
+  // Generate a unique ID for the new test
+  const newTestId = tests.length;
+
+  // Add the new test to the tests array
+  newTest.id = newTestId;
+  tests.push(newTest);
+
+  // Send a response with the newly created test
+  res.status(201).json(newTest);
 });
 
 app.post('/login', (req, res) => {

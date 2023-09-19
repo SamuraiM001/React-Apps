@@ -1,0 +1,53 @@
+/* ProblemCard.css */
+.problem-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide overflow content */
+    transition: height 0.3s ease-in-out; /* Smooth height transition */
+  }
+  
+  .expanded {
+    height: auto; /* Expand to fit content */
+  }
+  
+  .problem-card:hover {
+    cursor: pointer;
+    background-color: #f7f7f7;
+  }
+  
+  .problem-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .problem-description {
+    font-size: 1rem;
+    margin-top: 8px;
+    color: #555;
+    display: none; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+  }
+  
+  .expanded .problem-description {
+    display: block;
+    opacity: 1; /* Show and fade in when expanded */
+  }
+  
+  .problem-actions {
+    margin-top: 16px;
+    display: none; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+  }
+  
+  .expanded .problem-actions {
+    display: block;
+    opacity: 1; /* Show and fade in when expanded */
+  }
+  
